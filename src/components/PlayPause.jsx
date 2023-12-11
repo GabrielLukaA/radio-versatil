@@ -1,12 +1,10 @@
 "use client";
 import { useState } from "react";
-export const PlayPause = ({click}) => {
+export const PlayPause = ({click, isPlaying, setIsPlaying}) => {
   const [isPaused, setIsPaused] = useState(true);
 
-  async function handleTogglePlayPause () {
-     setIsPaused((prevState) => !prevState);
-  };
-  return isPaused ? (
+
+  return isPlaying ? (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -14,8 +12,8 @@ export const PlayPause = ({click}) => {
       viewBox="0 0 24 24"
       fill="none"
      onClick={async()=>{
-        await handleTogglePlayPause()
-        click(isPaused)
+        await setIsPlaying()
+        click(isPlaying)
  
      }}
     >
@@ -34,8 +32,8 @@ export const PlayPause = ({click}) => {
       viewBox="0 0 24 24"
       fill="none"
       onClick={async()=>{
-       await handleTogglePlayPause()
-       click(isPaused)
+       await setIsPlaying()
+       click(isPlaying)
 
     }}
       

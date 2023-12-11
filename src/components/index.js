@@ -1,4 +1,4 @@
-import { Back } from "./Back";
+
 
 export { HomeIcon } from "./HomeIcon";
 export { NoticesIcon } from "./NoticesIcon";
@@ -7,3 +7,4 @@ export { Menu } from "./Menu";
 export { Back } from "./Back";
 export { Front } from "./Front";
 export { PlayPause } from "./PlayPause";
+export { Waves } from "./Waves";

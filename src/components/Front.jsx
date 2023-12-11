@@ -1,4 +1,10 @@
-export const Front = ({ color }) => {
+export const Front = ({
+  color,
+  setCurrentMusic,
+  musics,
+  currentMusic,
+  pause,
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +13,14 @@ export const Front = ({ color }) => {
       viewBox="0 0 25 24"
       fill="none"
       className="rotate-180"
+      onClick={() => {
+        pause(true, currentMusic.audio, true);
+        let bah = musics.find((music) => {
+          return music.name == currentMusic.name;
+        });
+        console.log(bah);
+        setCurrentMusic(musics[musics.indexOf(bah) + 1]);
+      }}
     >
       <path
         fillRule="evenodd"
