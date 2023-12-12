@@ -1,7 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.text20{
+  font-family: 'Alata', sans-serif;
+  font-size: 20px;
+}
+
+.oi:nth-child(3n) {
+ border: solid 2px #00BFC3;
+ border-bottom: 0px;/* ou qualquer cor desejada */
+}
+.oi:nth-child(3n -2) {
+  border: solid 2px #FDD23B;
+  border-bottom: 0px; /* ou qualquer cor desejada */
+}
+.oi:nth-child(3n -1) {
+  border: solid 2px #78FF47;
+  border-bottom: 0px;/* ou qualquer cor desejada */
+}
+
+
+.text16{
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
+}
+.text20{
+  font-family: 'Alata', sans-serif;
+  font-size: 20px;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
